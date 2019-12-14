@@ -12,6 +12,7 @@ users, items, graph = processtor('ml-100k')
 # init GAT model.
 gat = GATConv(in_feats=91, out_feats=32, num_heads=2)
 
+
 input = torch.from_numpy(items).float()
 
 output = gat(graph, input)
